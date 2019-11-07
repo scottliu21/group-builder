@@ -1,10 +1,11 @@
+//Updated 11/6/2019
 package com.example.groupbuilder;
 
 public class GroupClass {
-    String GroupName, GroupLeader;
-    Boolean GroupFree;
-    String[] GroupMem, resource;
-    int memCount;
+    private String GroupName, GroupLeader;
+    private Boolean GroupFree;
+    private String[] GroupMem, resource;
+    private int memCount;
 
     public GroupClass() {
         //Constructor
