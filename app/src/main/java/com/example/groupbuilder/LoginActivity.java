@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText emailTV, passwordTV;
-    private Button loginButton;
+    private Button loginButton, signupButton;
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
@@ -40,6 +40,15 @@ public class LoginActivity extends AppCompatActivity {
                 loginUserAccount();
             }
         });
+        signupButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     private void loginUserAccount(){
@@ -50,10 +59,12 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(), "Please enter an email", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
         if (TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(), "Please enter a password", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
@@ -79,5 +90,6 @@ public class LoginActivity extends AppCompatActivity {
         passwordTV = findViewById(R.id.loginPassword);
         loginButton = findViewById(R.id.loginButton);
         progressBar = findViewById(R.id.loginProgressBar);
+        signupButton = findViewById(R.id.signupButton);
     }
 }
