@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dashboard"
+    tools:context=".DashboardActivity"
     android:orientation="vertical"
     android:padding="10dp"
     android:layout_gravity="center"
     android:id="@+id/dashboard">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/MainGroup"
+        android:id="@+id/MainGroupID"
         android:layout_width="160dp"
         android:layout_height="190dp"
         android:layout_margin="10dp">
@@ -52,9 +52,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/OtherGroupID"
         android:layout_width="160dp"
         android:layout_height="190dp"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
