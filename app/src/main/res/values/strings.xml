@@ -8,4 +8,11 @@
     <string name="loginPassword">Password</string>
     <string name="loginEmail">Email</string>
     <string name="account_login">Account login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="YourGroups">Your Groups</string>
+    <string name="groupDesc">Manage your groups</string>
+    <string name="YourProfile">Your Profile</string>
+    <string name="FindGroup">Other Groups</string>
+    <string name="Searchbar">Search for Groups</string>
+    <string name="GroupFinder">View other Groups</string>
 </resources>
