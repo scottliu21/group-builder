@@ -15,4 +15,5 @@
     <string name="FindGroup">Other Groups</string>
     <string name="Searchbar">Search for Groups</string>
     <string name="GroupFinder">View other Groups</string>
+    <string name="addGroup">Add Group</string>
 </resources>
