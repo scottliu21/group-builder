@@ -2,7 +2,7 @@
 package com.example.groupbuilder;
 
 public class GroupClass {
-    private String GroupName, GroupLeader;
+    private String GroupName, GroupLeader, description;
     private Boolean GroupFree;
     private String[] GroupMem, resource;
     private int memCount;
@@ -11,14 +11,22 @@ public class GroupClass {
         //Constructor
     }
 
+    public GroupClass(String GroupName, String GroupLeader, int memCount, String description){
+        this.GroupName = GroupName;
+        this.GroupLeader = GroupLeader;
+        this.memCount = memCount;
+        this.description = description;
+    }
+
     public GroupClass(String GroupName, String GroupLeader, int memCount, Boolean GroupFree,
-                      String[] GroupMem, String[] resource) {
+                      String[] GroupMem, String[] resource, String description) {
         this.GroupName = GroupName;
         this.GroupLeader = GroupLeader;
         this.memCount = memCount;
         this.GroupFree = GroupFree;
         this.GroupMem = GroupMem;
         this.resource = resource;
+        this.description =  description;
     }
 
     public void setGroupName(String groupName) { GroupName = groupName; }
@@ -33,6 +41,8 @@ public class GroupClass {
 
     public void setMemCount(int memCount) { this.memCount = memCount; }
 
+    public void setDescription(String description) { this.description = description; }
+
 
     public String getGroupName() { return GroupName; }
 
@@ -45,6 +55,8 @@ public class GroupClass {
     public String[] getResource() { return resource; }
 
     public int getMemCount() { return memCount; }
+
+    public String getDescription() { return description; }
 }
 
 
