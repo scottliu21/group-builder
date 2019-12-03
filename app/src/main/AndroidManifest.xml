@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddGroup"></activity>
+        <activity android:name=".ViewProfile"></activity>
+        <activity android:name=".AddGroup" />
         <activity android:name=".OtherGroups" />
         <activity android:name=".MainGroup" />
         <activity android:name=".DashboardActivity" />

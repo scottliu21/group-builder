@@ -21,10 +21,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddGroup extends AppCompatActivity {
-    String gName, gLeader, gDescription;
+    String gName, gLeader, gDescription, gClassCode;
     int gCount;
 
-    EditText gNameInput, gCountInput, gDescriptionInput;
+    EditText gNameInput, gCountInput, gDescriptionInput, gClassCodeInput;
     Button addGroup;
 
     final FirebaseDatabase db = FirebaseDatabase.getInstance();
@@ -39,6 +39,7 @@ public class AddGroup extends AppCompatActivity {
         gNameInput = findViewById(R.id.gName);
         gCountInput = findViewById(R.id.gMemCount);
         gDescriptionInput = findViewById(R.id.gDescription);
+        gClassCodeInput = findViewById(R.id.classCode);
         addGroup = findViewById(R.id.addGroupButton);
 
         gLeader = user.getEmail();
@@ -49,19 +50,21 @@ public class AddGroup extends AppCompatActivity {
                 gName = gNameInput.getText().toString();
                 gCount = Integer.valueOf(gCountInput.getText().toString());
                 gDescription = gDescriptionInput.getText().toString();
+                gClassCode = gClassCodeInput.getText().toString();
 
                 GroupClass newGroup = new GroupClass();
                 newGroup.setGroupName(gName);
                 newGroup.setGroupLeader(gLeader);
                 newGroup.setMemCount(gCount);
                 newGroup.setDescription(gDescription);
+                newGroup.setClassCode(gClassCode);
 
                 DatabaseReference groupsRef = ref.child("groups");
                 Map<String, GroupClass> groups = new HashMap<>();
                 groups.put(gName, newGroup);
-                groupsRef.setValue(groups);
+                groupsRef.push().setValue(groups);
 
-                Toast.makeText(AddGroup.this, "Group has been created", Toast.LENGTH_SHORT);
+                Toast.makeText(AddGroup.this, "Group has been created", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(AddGroup.this, DashboardActivity.class);
                 startActivity(intent);
             }

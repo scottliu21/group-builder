@@ -6,16 +6,18 @@ public class GroupClass {
     private Boolean GroupFree;
     private String[] GroupMem, resource;
     private int memCount;
+    private String classCode;
 
     public GroupClass() {
         //Constructor
     }
 
-    public GroupClass(String GroupName, String GroupLeader, int memCount, String description){
+    public GroupClass(String GroupName, String GroupLeader, int memCount, String description, String classCode){
         this.GroupName = GroupName;
         this.GroupLeader = GroupLeader;
         this.memCount = memCount;
         this.description = description;
+        this.classCode = classCode;
     }
 
     public GroupClass(String GroupName, String GroupLeader, int memCount, Boolean GroupFree,
@@ -43,6 +45,8 @@ public class GroupClass {
 
     public void setDescription(String description) { this.description = description; }
 
+    public void setClassCode (String classCode) {this.classCode = classCode;}
+
 
     public String getGroupName() { return GroupName; }
 
@@ -57,6 +61,8 @@ public class GroupClass {
     public int getMemCount() { return memCount; }
 
     public String getDescription() { return description; }
+
+    public String getClassCode() { return classCode; }
 }
 
 

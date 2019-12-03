@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
-    private CardView MainGroup, OtherGroups, AddGroup;
+    private CardView MainGroup, OtherGroups, AddGroup, MyProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,13 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         MainGroup = (CardView) findViewById(R.id.MainGroupID);
         OtherGroups = (CardView) findViewById(R.id.OtherGroupID);
         AddGroup = (CardView) findViewById(R.id.AddGroupID);
+        MyProfile = findViewById(R.id.MyProfileID);
 
         // Add onClickListeners to each Card
         MainGroup.setOnClickListener(this);
         OtherGroups.setOnClickListener(this);
         AddGroup.setOnClickListener(this);
+        MyProfile.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +38,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case R.id.MainGroupID : i = new Intent(this, MainGroup.class);
                  startActivity(i); break;
             case R.id.OtherGroupID : i = new Intent(this, OtherGroups.class);
+                 startActivity(i); break;
+            case R.id.MyProfileID : i = new Intent(this, ViewProfile.class);
                  startActivity(i); break;
             default: break;
         }
