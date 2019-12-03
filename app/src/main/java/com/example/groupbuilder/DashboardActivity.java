@@ -35,7 +35,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         switch(v.getId()){
             case R.id.AddGroupID : i = new Intent(this, AddGroup.class );
                  startActivity(i); break;
-            case R.id.MainGroupID : i = new Intent(this, GroupList.class);
+            case R.id.MainGroupID : i = new Intent(this, ViewGroups.class);
                  startActivity(i); break;
             case R.id.OtherGroupID : i = new Intent(this, OtherGroups.class);
                  startActivity(i); break;
