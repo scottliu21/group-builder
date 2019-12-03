@@ -18,6 +18,7 @@ public class GroupClass {
         this.memCount = memCount;
         this.description = description;
         this.classCode = classCode;
+
     }
 
     public GroupClass(String GroupName, String GroupLeader, int memCount, Boolean GroupFree,
@@ -46,7 +47,6 @@ public class GroupClass {
     public void setDescription(String description) { this.description = description; }
 
     public void setClassCode (String classCode) {this.classCode = classCode;}
-
 
     public String getGroupName() { return GroupName; }
 

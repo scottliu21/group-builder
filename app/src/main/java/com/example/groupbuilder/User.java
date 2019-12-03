@@ -1,15 +1,19 @@
 package com.example.groupbuilder;
 
 public class User {
-    public String name, email, year, major;
+    String name, email, year, major;
+    String groupName;
+    boolean inGroup;
 
     public User(){}
 
-    public User(String name, String email, String year, String major){
+    public User(String name, String email, String year, String major, String groupName, boolean inGroup){
         this.name = name;
         this.email = email;
         this.year = year;
         this.major = major;
+        this.groupName = groupName;
+        this.inGroup = inGroup;
     }
 
     public void setName(String name) {
@@ -28,6 +32,14 @@ public class User {
         this.major = major;
     }
 
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public void setInGroup(boolean inGroup){
+        this.inGroup = inGroup;
+    }
+
     public String getName() {
         return name;
     }
@@ -42,5 +54,9 @@ public class User {
 
     public String getMajor() {
         return major;
+    }
+
+    public boolean getInGroup(){
+        return inGroup;
     }
 }
