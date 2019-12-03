@@ -14,7 +14,7 @@
         <activity android:name=".ViewProfile"></activity>
         <activity android:name=".AddGroup" />
         <activity android:name=".OtherGroups" />
-        <activity android:name=".MainGroup" />
+        <activity android:name=".GroupList" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
