@@ -21,9 +21,9 @@ public class UserList extends ArrayAdapter<User> {
     //@Override
     public View getView(int position, View convertView, ViewGroup parent){
         LayoutInflater inflater = context.getLayoutInflater();
-        View listViewItem = inflater.inflate(R.layout.activity_group_list, null,  true);
+        View listViewItem = inflater.inflate(R.layout.user_list, null,  true);
 
-        TextView textViewName = (TextView) listViewItem.findViewById(R.id.textView);
+        TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewUser);
 
         User user = users.get(position);
         textViewName.setText(user.getName());

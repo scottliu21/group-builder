@@ -39,7 +39,8 @@ public class ViewGroup extends AppCompatActivity {
         Intent intent = getIntent();
 
         databaseUsers = FirebaseDatabase.getInstance().getReference("groups").child(intent.getStringExtra(USER_ID));
-        textViewGroupNames = (TextView) findViewById(R.id.MainGroupID);
+        textViewGroupNames = (TextView) findViewById(R.id.textViewGroup);
+        listViewGroups = findViewById(R.id.listGroups);
 
         groupClasses = new ArrayList<>();
 
