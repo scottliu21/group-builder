@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainGroup">
 
+    <ListView
+        android:id="@+id/mainGroupInfo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
